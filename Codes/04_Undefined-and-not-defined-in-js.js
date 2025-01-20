@@ -17,3 +17,12 @@ if(a === undefined){
 else{
   console.log('a is not defined')
 }
+
+// javascript is loosely typed language
+// we can store anything inside a variable, wether a string or a number
+var b;
+console.log(b); // undefined
+b = 10;
+console.log(b); // 10
+b = "hello wazir"
+console.log(b); // hello wazir
