@@ -13,3 +13,8 @@ var a = 10; // global variable
 function b(){
   var x = 10 // local variable
 }
+
+
+console.log(window.a) // 10
+console.log(a) // 10
+console.log(x) // ReferenceError: x is not defined
