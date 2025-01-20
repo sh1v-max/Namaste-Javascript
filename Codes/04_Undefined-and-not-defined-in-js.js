@@ -26,3 +26,6 @@ b = 10;
 console.log(b); // 10
 b = "hello wazir"
 console.log(b); // hello wazir
+
+//! it's not recommended to put undefined in a variable
+// it's not a mistake tho
