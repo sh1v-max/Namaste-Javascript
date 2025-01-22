@@ -72,7 +72,7 @@ console.log(a); // 100
 var c = 10;
 function d() {
     var c = 25;
-    console.log(window.c);//Inside block scope o variable 
+    console.log(window.c);//Inside block scope c variable 
     window.c = 20;
 }
 d();
@@ -87,3 +87,11 @@ var x = 12;  // but we can shadow var using let
     console.log(x);
 }
 console.log(x);
+
+// not a illegal shadow
+let a = 20;
+function x(){
+  var a = 20;
+}
+
+// lexical scop work the same way in the block also
