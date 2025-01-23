@@ -1,5 +1,5 @@
-# Season 01:-
-#  Execution Context.
+
+# Execution Context.
 
 #### Everything in JS happens inside the execution context.
 
@@ -96,7 +96,7 @@ it is Not defined
     - Memory Leak
     - Freeze browser
 
-#  setTimeout + Closures Interview Question
+# setTimeout + Closures Interview Question
 - Time, tide and Javascript wait for none.
 
 # JS interview questions
@@ -172,7 +172,7 @@ TLDR; Call stack has no timer.
 - 4 How does it matter if we delay for setTimeout would be 0ms. Then callback will move to queue without any wait ?
      - No, there are trust issues with setTimeout() 😅. The callback function needs to wait until the Call Stack is empty. So the 0 ms callback might have to wait for 100ms also if the stack is busy.
        
-# : JS Engine Exposed Google's V8 architecture
+# JS Engine Exposed Google's V8 architecture
 
 #### JS runs literally everywhere from smart watch to robots to browsers because of Javascript Runtime Environment (JRE)
 
@@ -231,8 +231,7 @@ compiled) (JIT - Just in time compilation). And there are still ways to do async
 - Reduce function
     - It is a function which take all the values of array and gives a single output of it. It reduces the array to give a single output.
       
-# Season 02:-
-# : Callback Hell
+#  Callback Hell
 ## There are 2 Parts of Callback:
 ### 1. Good Part of callback
 - Callback are super important while writing asynchronous code in JS.
