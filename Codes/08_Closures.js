@@ -53,3 +53,13 @@ x()
 // above settimeout will return 1 even without calling the function x() because of closure
 // cuz this is how javascript even loop works abd the asynchronous nature of setTimeout
 //? it forms closure too
+
+// another example
+function x(){
+  var i = 1
+  setTimeout(function(){
+    console.log(i)
+  }, 1000)
+  console.log('namaste javascript')
+}
+x()
