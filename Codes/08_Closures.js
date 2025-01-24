@@ -70,7 +70,7 @@ function x(){
 
 //^ Print the number 1 to 5 after each seconds using setTimeout by using var
 
-//* basic method (wrong method, which most people are gonna use)
+//* basic method (wrong method, with var)
 function x() {
   for (var i = 1; i <= 5; i++) {
     setTimeout(function () {
@@ -95,21 +95,22 @@ function x() {
   }
   console.log('Namaste JavaScript')
 }
-x()
+// x()
 // it will print 1 to 5 after each sec
 // because let has block scope and it creates the new copies i after every loop
+// it makes 5 copies of variable i and each copy is confined to the block inside the loop ie. settimeout each time it runs for every delay of 1 sec
 
-//* correct method 2 (using closure)
-// function x() {
-//   //let has block scope and it creates the new copies i after every loop
-//   for (var i = 1; i <= 5; i++) {
-//       function close(x) {
-//           setTimeout(function () {
-//               console.log(x);
-//           }, x * 1000);
-//       }
-//       close(i);//every time we call this function again it will provide the new value of i and now it will work with var
-//   }
-//   console.log("Namaste JavaScript")
-// }
-// x();
+//* correct method 2 (using closure), if interviewer ask to use var
+function x() {
+  for (var i = 1; i <= 5; i++) {
+      function close(x) {
+          setTimeout(function () {
+              console.log(x);
+          }, x * 1000);
+      }
+      close(i);//every time we call this function again it will provide the new value of i and now it will work with var
+  }
+  console.log("Namaste JavaScript")
+}
+x();
+// in this case, we're creating new copy of i and passing it to the function close ie. to x
