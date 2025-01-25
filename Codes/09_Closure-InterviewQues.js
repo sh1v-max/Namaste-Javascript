@@ -61,3 +61,6 @@ function outest() {
 }
 var close = outest()("Hello");
 close()
+
+// as inner function forms a closure with it's outer environment so sequence 
+// does not matter
