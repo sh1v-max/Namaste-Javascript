@@ -20,7 +20,7 @@ function outer() {
   function inner() {
       console.log(a);
   }
-  var a = 10;//Even if we move the position of variable declaration will still forms closure
+  var a = 10;//Even if we move the position of variable declaration it will still forms closure
   return inner;
 }
 // outer()();
@@ -31,7 +31,7 @@ function outer() {
   function inner() {
       console.log(a);
   }
-  let a = 10;//Even if we change the var to let will still form closure
+  let a = 10;//Even if we change the var to let it will still form closure
   return inner;
 }
 // outer()();
