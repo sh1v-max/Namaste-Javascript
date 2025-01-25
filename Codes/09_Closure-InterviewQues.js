@@ -60,4 +60,4 @@ function outest() {
   return outer
 }
 var close = outest()("Hello");
-close();
+close()
