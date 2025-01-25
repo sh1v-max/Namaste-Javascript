@@ -64,3 +64,11 @@ close()
 
 // as inner function forms a closure with it's outer environment so sequence 
 // does not matter
+
+//* Q2: What is the advantages of Closure in Javascript?
+// Ans: 1. module design pattern
+// 2. currying
+// 3. function factory
+// 4. memoization
+// 5. maintaining state in async code as in setTimeout
+// 6. data hiding and encapsulation
