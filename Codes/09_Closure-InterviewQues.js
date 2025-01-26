@@ -141,3 +141,16 @@ counter1.decrementCounter() // 1
 // 3. security issue
 // 4. garbage collection issue
 // what is garbage collection? It's a process of automatically deleting unused memory
+// and using closure, it's difficult to determine when to delete the memory
+
+function a (){
+  var x = 10, z = 20
+  return function b(){
+    console.log(x)
+  }
+}
+var c = a()
+c() // 10
+// once a is called, it's variables should be garbage collected ideally, but function b is still holding the reference to x
+// so, x is not garbage collected
+// but z is garbage collected(smartly) as it's not used by b
