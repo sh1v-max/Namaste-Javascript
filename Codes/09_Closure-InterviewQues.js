@@ -5,6 +5,17 @@
 // function and its lexical scope bundled together.
 
 //? example
+//code 1
+function outer() {
+  var a = 10;
+  function inner() {
+      console.log(a);
+  }
+  return inner;
+}
+// outer()();//It still remembers the value of a variable.
+
+//code 2
 function outer() {
   var a = 10;
   function inner() {
@@ -12,7 +23,12 @@ function outer() {
   }
   return inner();
 }
-// outer();//It still remembers the value of a variable.
+// outer()
+
+// difference between code 1 and code 2
+// code 1, inner is returned as a reference and invoked later (outer()())
+// code 2, inner is immediately executer inside outer()(inner() is directly invoked)
+
 
 //Changing position of variable
 function outer() {
@@ -65,7 +81,7 @@ close()
 // as inner function forms a closure with it's outer environment so sequence 
 // does not matter
 
-//* Q2: What is the advantages of Closure in Javascript?
+//* Q2: What are the advantages of Closure in Javascript?
 // Ans: 1. module design pattern
 // 2. currying
 // 3. function factory
