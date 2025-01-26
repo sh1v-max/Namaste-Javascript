@@ -153,4 +153,4 @@ var c = a()
 c() // 10
 // once a is called, it's variables should be garbage collected ideally, but function b is still holding the reference to x
 // so, x is not garbage collected
-// 
+// but z is garbage collected(smartly) as it's not used by b
