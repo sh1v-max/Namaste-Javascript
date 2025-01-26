@@ -100,7 +100,7 @@ function incrementCounter(){
 
 // here comes data hiding or encapsulation
 function counter(){
-  var count = 0
+  var count = 0 // nobody can access this variable from outside, its hidden
   return function incrementCounter(){
     count++
     console.log(count)
@@ -108,4 +108,36 @@ function counter(){
 }
 // we are wrapping the count variable inside a function to form a closure and returning the inner function
 var counter1 = counter()
-counter1()
+// counter1() // 1
+// counter1() // 2 call it as many times to get incremented value
+
+var counter2 = counter()
+// counter2() // 1
+// counter2() // 2 counter 2 is different from counter 1 and is independent
+// this time, it creates a new closure with a new count variable and form a new independent copy
+
+//? above code is not good and scalable for say, when you plan to implement a decrement function
+
+//* to solve this, we can use constructor function
+function Counter(){ // it's recommended to use PascalCase for constructor function
+  var count = 0
+  this.incrementCounter = function(){
+    count++
+    console.log(count)
+  }
+  this.decrementCounter = function(){
+    count--
+    console.log(count)
+  }
+}
+var counter1 = new Counter() // new keyword creates a new instance of Counter, should use new keyword
+counter1.incrementCounter() // 1
+counter1.incrementCounter() // 2
+counter1.decrementCounter() // 1
+
+//* Q3: What are the disadvantages of Closure in Javascript?
+// Ans: 1. memory leak, or over consumption of memory
+// 2. performance issue
+// 3. security issue
+// 4. garbage collection issue
+// what is garbage collection? It's a process of automatically deleting unused memory
