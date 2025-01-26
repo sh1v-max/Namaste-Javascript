@@ -76,7 +76,7 @@ function outest() {
   return outer
 }
 var close = outest()("Hello");
-close()
+// close()
 
 // as inner function forms a closure with it's outer environment so sequence 
 // does not matter
@@ -85,6 +85,27 @@ close()
 // Ans: 1. module design pattern
 // 2. currying
 // 3. function factory
-// 4. memoization
+// 4. memoization and once function
 // 5. maintaining state in async code as in setTimeout
 // 6. data hiding and encapsulation
+
+//* examples of data hiding and encapsulation
+
+var count = 0
+function incrementCounter(){
+  count++
+  console.log(count)
+}
+// major flaw is that count is global and can be accessed and modified from anywhere
+
+// here comes data hiding or encapsulation
+function counter(){
+  var count = 0
+  return function incrementCounter(){
+    count++
+    console.log(count)
+  }
+}
+// we are wrapping the count variable inside a function to form a closure and returning the inner function
+var counter1 = counter()
+counter1()
