@@ -41,11 +41,18 @@ var c = function (){
 // same as function expression but with a name
 var d = function xyz(){
   console.log('I am named function expression');
+  console.log(xyz) // I am named function expression
 }
-d()
+// d()
 // xyz() // ReferenceError: xyz is not defined
 // xyz is not available outside the function, created in global scope
+// you can access it inside the function
 
+//* parameter vs argument
+var e = function(param1, param2){ // param are the local variables inside the function
+  console.log(param1, param2)
+}
+e('argument1', 'argument2') // argument are the values passed to the function
 
 //* what is first class function? 
 // a function that can be treated like any other values
@@ -53,3 +60,4 @@ d()
 // can be passed as an argument
 // can be returned from another function
 
+// we can pass a function inside a function as argument and/or return a function (HOF)
