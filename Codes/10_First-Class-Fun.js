@@ -1,3 +1,5 @@
+//! functions are first class citizens/first class functions in javascript
+
 //* function statement aka function declaration
 function a(){
   console.log('I am function statement');
@@ -52,7 +54,7 @@ var d = function xyz(){
 var e = function(param1, param2){ // param are the local variables inside the function
   console.log(param1, param2)
 }
-e('argument1', 'argument2') // argument are the values passed to the function
+// e('argument1', 'argument2') // argument are the values passed to the function
 
 //* what is first class function? 
 // a function that can be treated like any other values
@@ -61,3 +63,26 @@ e('argument1', 'argument2') // argument are the values passed to the function
 // can be returned from another function
 
 // we can pass a function inside a function as argument and/or return a function (HOF)
+
+var f = function(param1){
+  console.log(param1)
+}
+function xy(){} // other function or a first class function
+f(function(){})
+f(xy)
+
+// we can return a function from a function
+var g = function(param1){
+  return function(){}
+}
+console.log(g())
+
+//* arrow function
+// a shorter syntax for writing function expressions
+// no need to write function keyword
+// no need to write return keyword
+
+var h = () => {
+  console.log('I am arrow function')
+}
+h()
