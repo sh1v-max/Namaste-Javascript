@@ -22,7 +22,17 @@ setTimeout(function () {
 // we should always use async functions to prevent blocking the main thread
 
 //Event handler and listeners in javascript
-document.getElementById("clickMe")
-    .addEventListener("click", function xyz() {
-        console.log("button clicked");
-    })
+document.getElementById('clickMe')
+.addEventListener('click', function xyz() {
+  console.log('button clicked')
+})
+
+//Event handler and listeners in javascript using closures finding the count of click.
+function attachEventListener() {
+  let count = 0;
+  document.getElementById("clickMe")
+      .addEventListener("click", function xyz() {
+          console.log("Button clicked", ++count);
+      })
+}
+attachEventListener();
