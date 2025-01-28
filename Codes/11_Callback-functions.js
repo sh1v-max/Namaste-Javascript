@@ -36,3 +36,9 @@ function attachEventListener() {
       })
 }
 attachEventListener();
+
+//* garbage collection and removeEventListener
+// if we don't removeEventListener, it will create memory leak
+// as event listener are heavy as they form closures, so even when call stack is empty,
+// eventListener will still be in memory allocated to count as it doesn't know when it may need to count again
+// so we should always removeEventListener after its work is done
