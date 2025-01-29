@@ -48,5 +48,5 @@ console.log("End")
 // call stack - where the code execute
 // web APIs - where the async code execute
 // callback queue - where the callback function goes
-// microtask queue - where the fetch function goes
+// microtask queue - where the fetch function goes (it has higher priority than the callback queue)
 // event loop - which checks the call stack and push the callback function to the call stack
