@@ -53,3 +53,6 @@ console.log("End")
 
 
 //! microtask queue - all the callback function which comes through promises and mutation observer goes in the microtask queue
+
+//* STARVATION
+// google about it more
