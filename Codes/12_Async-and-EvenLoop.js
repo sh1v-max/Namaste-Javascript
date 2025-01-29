@@ -39,3 +39,14 @@ fetch("https://api.netflix.com")
     })
 
 console.log("End")
+// in the above example, the setTimeout function will go to the callback queue and then to the call stack
+// the fetch part with cbF function, after it get resolve will go to the microtask queue
+// and not in the callback queue and then to the call stack
+//? that's the different behavior of the fetch function
+``
+//& let summarize all the component
+// call stack
+// web APIs
+// callback queue
+// microtask queue
+// event loop
