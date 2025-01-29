@@ -43,10 +43,10 @@ console.log("End")
 // the fetch part with cbF function, after it get resolve will go to the microtask queue
 // and not in the callback queue and then to the call stack
 //? that's the different behavior of the fetch function
-``
+
 //& let summarize all the component
-// call stack
-// web APIs
-// callback queue
-// microtask queue
-// event loop
+// call stack - where the code execute
+// web APIs - where the async code execute
+// callback queue - where the callback function goes
+// microtask queue - where the fetch function goes
+// event loop - which checks the call stack and push the callback function to the call stack
