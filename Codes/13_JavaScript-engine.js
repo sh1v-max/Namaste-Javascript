@@ -11,7 +11,7 @@
 // ECMAScript is the standard for JavaScript
 // JavaScript engines: V8(chrome), SpiderMonkey(firefox), Chakra(edge), JavaScriptCore
 
-// In all languages, code is compiled either with interpreter or with compiler. 
+//? In all languages, code is compiled either with interpreter or with compiler. 
 // JS used to have only interpreter in old times, but now has both to compile JS code.
 
 // Interpreter : Takes code and executes line by line. Has no idea what will happen in next line. Very fast.
