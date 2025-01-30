@@ -7,3 +7,5 @@
 // 3. Microtask Queue
 // 4. Callback Queue
 // 5. Event Loop
+// ECMAScript is the standard for JavaScript
+// JavaScript engines: V8(chrome), SpiderMonkey(firefox), Chakra(edge), JavaScriptCore
