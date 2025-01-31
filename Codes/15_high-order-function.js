@@ -1,6 +1,6 @@
 //* what is high order function
-// high order function are regular function that take another functions as 
-// arguments or return functions as their results
+//? high order function are regular function that take another functions as 
+//? arguments or return functions as their results
 
 // example
 function x(){
@@ -52,6 +52,8 @@ const calculateDia = function(radius){
 
 //=========================================================
 //* By functional programming using generic function
+//& this is how you should write code in interview
+
 const area = function (radius) {
   return Math.PI * radius * radius;
 }
