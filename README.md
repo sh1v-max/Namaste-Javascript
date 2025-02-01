@@ -121,90 +121,90 @@ Topics in detail:
 |7| [Truthy and Falsy](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/07_Truthy-and-Falsy-JS/README.md) |
 |8| [Comparison Operator](https://github.com/sh1v-max/Learning_JavaScript-2.1/tree/main/08_Comparison-Operator-JS) |
 |9| [Logical Operators](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/09_Logical-Operators-JS/README.md)|
-|10| [Decision Making (IF)](./10_Decision-Making-IF-JS/README.md)|
-|11| [Optimize Decision Making](./11_Optimize-Decision-Making-JS/README.md)|
-|12| [Nested IF-ELSE](./12_Nested-IF-ELSE-JS/README.md)|
-|13| [Switch Case](./13_Switch-Case-JS/README.md)|
-|14| [Ternary Operator](./14_Ternary-Operator-JS/README.md)|
-|15| [Memory Location Visualisation](./15_Memory-Loacation-Visualisation-JS/README.md)|
-|16| [Objects](./16_Objects-JS/README.md)|
-|17| [Object Freeze/Seal](./17_Object-FreezeSeal-JS/README.md)|
-|18| [Array](./18_Array-JS/README.md)|
-|19| [Multidimensional Array](./19_Multidimensional-Array/README.md)|
-|20| [Duplicating Arrays and Objects](./20_Duplicationg-Arrays-and-Object/README.md)|
-|21| [Combined Assignment Operators](./21_Combined-Assignment-Operators-JS/README.md)|
-|22| [While Loop](./22_While-Loop-JS/README.md)|
-|23| [For Loop](./23-For-Loop-JS/README.md)|
-|24| [Do While Loop](./24_Do-While-Loop-JS/README.md)|
-|25| [Intro Functions](./25_Intro-Functions-JS/README.md)|
-|26| [Execution Context Function](./26-Execution-Context-Function-JS/README.md)|
-|27| [Hoisting](./27_Hoisting-JS/README.md)|
-|28| [Scope in JS](./28_Scope-in-JS/README.md)|
-|29| [Lexical and Block Scope](./29_Lexical-And-Block-Scope-JS/README.md)|
-|30| [High Order Function](./30_High-Order-Function-JS/README.md)|
-|31| [SetTimeout/SetInterval](./31_SetTimeOut-SetInterval-JS/README.md)|
-|32| [Event Loop and Callback Queue](./32_Event-Loop-and-Callback-Queue-JS/README.md)|
-|33| [Returning Function with Closure](./33_Returning-Function-With-Closure-JS/README.md)|
-|33.9| [Understanding Closure](./33.9_Understandig-Closure/README.md)|
-|34| [Function vs Methods](./34_Function-VS-Methods-JS/README.md)|
-|35| [Arrow Function](./35_Arrow-Function-JS/README.md)|
-|36| [For-in vs For-of Loop](./36_For-in-VS-For-of-Loop-JS/README.md)|
-|37| [ForEach Array Method](./37_ForEach-Array-method-JS/README.md)|
-|38| [Map, Filter, and Reduce in JS](./38_MAP-in-JS/README.md)|
-|39| [Some and Every in JS](./39_Some-and-Every-in-JS/README.md)|
-|40| [Argument Object in JS](./40_Argument-Object-In-JS/README.md)|
-|41| [Default Parameters](./41_Default-Parameters-JS/README.md)|
-|42| [Spread Operator](./42_Spread-Operator-JS/README.md)|
-|43| [Rest Parameters](./43_Rest-Parameters-JS/README.md)|
-|44| [Destructuring in JS](./44_Destructuring-in-JS/README.md)|
-|45| [Browser Object Model (BOM)](./45_Browser-Object-Model-BOM-JS/README.md)|
-|46| [Document Object Model (DOM)](./46_Document-Object-Model-JS/Readme.md)|
-|47| [Selecting Elements in DOM](./47_Selecting-element-DOM-JS/Readme.md)|
-|48| [InnerText, InnerHTML, TextContent in DOM](./48_InnerText-InnerHTML-TextContent-DOM-JS/README.md)|
-|49| [getAttribute, setAttribute in DOM](./49_getAttribute-setAttribute-DOM-JS/README.md)|
-|50| [How to Change Style in DOM](./50_How-to-change-Style-DOM-JS/README.md)|
-|51| [Accessing Parent and Child Elements in DOM](./51_Accessing-Parent-and-Child-elements-DOM-JS/README.md)|
-|52| [Element and Node in DOM](./52_Element-and-Node-DOM-JS/README.md)|
-|53| [append and appendChild in DOM](./53_append-and-appendChild-DOM-JS/README.md)|
-|54| [Creating Element in DOM](./54_Creating-element-DOM-JS/README.md)|
-|55| [Removing Element in DOM](./55_Removing-emelemt-DOM-JS/README.md)|
-|56| [Event Listeners in DOM](./56_Event-Listeners-DOM-JS/README.md)|
-|57| [Form Event and Event Object in DOM](./57_form-event-and-event-object-DOM-JS/README.md)|
-|58| [Keyboard Event in DOM](./58_Keyboard-event-DOM-JS/README.md)|
-|59| [Mouse Events in DOM](./59_Mouse-events-DOM-JS/README.md)|
-|60| [Event Bubbling and Capturing in DOM](./60_Event-bubbling-and-Event-capturing-DOM-JS/README.md)|
-|61| [Event Bubbling and Capturing in DOM (Duplicate)](./60_Event-bubbling-and-Event-capturing-DOM-JS/README.md)|
-|62| [Event Delegation in DOM](./62_Event-Delegation-DOM-JS/README.md)|
-|63| [Local Storage in JS](./63_Local-Storage-JS/README.md)|
-|64| [API – Talking to the Outside World](./64_API-talking-to-the-outside-world-JS/README.md)|
-|65| [XMLHttpRequest in JS](./65_XMLHttpRequest-JS/README.md)|
-|66| [Synchronous vs Asynchronous](./66_Synchronous-Vs-Asynchronous-JS/README.md)|
-|67| [Callback Hell in JS](./67_Callbakc-Hell-JS/README.md)|
-|68| [Promises in JS](./68-Promises-JS/README.md)|
-|69| [Fix Callback Hell in JS](./69_Fix-Callback-Hell-JS/README.md)|
-|70| [Introducing Fetch API in JS](./70_Introducing-Fetch-API-JS/README.md)|
-|71| [Async/Await in JS](./71_Async-Await-JS/README.md)|
-|72| [Try and Catch in JS](./72_Try-and-Catch-JS/README.md)|
-|73| [Optional Chaining in JS](./73_Optional-Chaining-JS/README.md)|
-|74| [ES6 Modules in JS](./74_ES6-Modules-JS/README.md)|
-|75| [OOP and Factory Function in JS](./75_Oop-and-factory-function-JS/README.md)|
-|76| [OOP and Constructor Functions in JS](./76_Oop-and-Constructor-Functions-JS/README.md)|
-|77| [Classes in JS](./77_Classes-in-JS/README.md)|
-|78| [How to Make Private Class Properties in JS](./78_How-to-make-private-class-properties-JS/README.md)|
-|79| [Static Property and Methods in JS](./79_Static-property-and-methods-in-JS/README.md)|
-|80| [Getters and Setters in JS](./80_Getters-and-Setters-in-JS/README.md)|
-|81| [Prototypal Inheritance Using Extends and Super Keyword in JS](./81_Prototypal-inheritance-using-Extends-and-Super-keyword-JS/README.md)|
-|82| [This Keyword in JS](./82_This-Keyword-in-JS/README.md)|
-|83| [Dates in JS](./83_Dates-in-JS/README.md)|
+|10| [Decision Making (IF)](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/10_Decision-Making-IF-JS/README.md)|
+|11| [Optimize Decision Making](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/11_Optimize-Decision-Making-JS/README.md)|
+|12| [Nested IF-ELSE](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/12_Nested-IF-ELSE-JS/README.md)|
+|13| [Switch Case](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/13_Switch-Case-JS/README.md)|
+|14| [Ternary Operator](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/14_Ternary-Operator-JS/README.md)|
+|15| [Memory Location Visualization](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/15_Memory-Loacation-Visualisation-JS/README.md)|
+|16| [Objects](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/16_Objects-JS/README.md)|
+|17| [Object Freeze/Seal](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/17_Object-FreezeSeal-JS/README.md)|
+|18| [Array](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/18_Array-JS/README.md)|
+|19| [Multidimensional Array](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/19_Multidimensional-Array/README.md)|
+|20| [Duplicating Arrays and Objects/Deep and shallow copy](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/20_Duplicationg-Arrays-and-Object/README.md)|
+|21| [Combined Assignment Operators](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/21_Combined-Assignment-Operators-JS/README.md)|
+|22| [While Loop](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/22_While-Loop-JS/README.md)|
+|23| [For Loop](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/23-For-Loop-JS/README.md)|
+|24| [Do While Loop](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/24_Do-While-Loop-JS/README.md)|
+|25| [Intro Functions](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/25_Intro-Functions-JS/README.md)|
+|26| [Execution Context Function](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/26-Execution-Context-Function-JS/README.md)|
+|27| [Hoisting](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/27_Hoisting-JS/README.md)|
+|28| [Scope in JS](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/28_Scope-in-JS/README.md)|
+|29| [Lexical and Block Scope](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/29_Lexical-And-Block-Scope-JS/README.md)|
+|30| [High Order Function](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/30_High-Order-Function-JS/README.md)|
+|31| [SetTimeout/SetInterval](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/31_SetTimeOut-SetInterval-JS/README.md)|
+|32| [Event Loop and Callback Queue](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/32_Event-Loop-and-Callback-Queue-JS/README.md)|
+|33| [Returning Function with Closure](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/33_Returning-Function-With-Closure-JS/README.md)|
+|33.9| [Understanding Closure](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/33.9_Understandig-Closure/README.md)|
+|34| [Function vs Methods](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/34_Function-VS-Methods-JS/README.md)|
+|35| [Arrow Function](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/35_Arrow-Function-JS/README.md)|
+|36| [For-in vs For-of Loop](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/36_For-in-VS-For-of-Loop-JS/README.md)|
+|37| [ForEach Array Method](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/37_ForEach-Array-method-JS/README.md)|
+|38| [Map, Filter, and Reduce in JS](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/38_MAP-in-JS/README.md)|
+|39| [Some and Every in JS](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/39_Some-and-Every-in-JS/README.md)|
+|40| [Argument Object in JS](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/40_Argument-Object-In-JS/README.md)|
+|41| [Default Parameters](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/41_Default-Parameters-JS/README.md)|
+|42| [Spread Operator](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/42_Spread-Operator-JS/README.md)|
+|43| [Rest Parameters](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/43_Rest-Parameters-JS/README.md)|
+|44| [Destructuring in JS](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/44_Destructuring-in-JS/README.md)|
+|45| [Browser Object Model (BOM)](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/45_Browser-Object-Model-BOM-JS/README.md)|
+|46| [Document Object Model (DOM)](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/46_Document-Object-Model-JS/Readme.md)|
+|47| [Selecting Elements in DOM](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/47_Selecting-element-DOM-JS/Readme.md)|
+|48| [InnerText, InnerHTML, TextContent in DOM](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/48_InnerText-InnerHTML-TextContent-DOM-JS/README.md)|
+|49| [getAttribute, setAttribute in DOM](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/49_getAttribute-setAttribute-DOM-JS/README.md)|
+|50| [How to Change Style in DOM](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/50_How-to-change-Style-DOM-JS/README.md)|
+|51| [Accessing Parent and Child Elements in DOM](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/51_Accessing-Parent-and-Child-elements-DOM-JS/README.md)|
+|52| [Element and Node in DOM](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/52_Element-and-Node-DOM-JS/README.md)|
+|53| [append and appendChild in DOM](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/53_append-and-appendChild-DOM-JS/README.md)|
+|54| [Creating Element in DOM](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/54_Creating-element-DOM-JS/README.md)|
+|55| [Removing Element in DOM](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/55_Removing-emelemt-DOM-JS/README.md)|
+|56| [Event Listeners in DOM](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/56_Event-Listeners-DOM-JS/README.md)|
+|57| [Form Event and Event Object in DOM](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/57_form-event-and-event-object-DOM-JS/README.md)|
+|58| [Keyboard Event in DOM](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/58_Keyboard-event-DOM-JS/README.md)|
+|59| [Mouse Events in DOM](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/59_Mouse-events-DOM-JS/README.md)|
+|60| [Event Bubbling and Capturing in DOM](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/60_Event-bubbling-and-Event-capturing-DOM-JS/README.md)|
+|61| [Event Bubbling and Capturing in DOM (Duplicate)](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/60_Event-bubbling-and-Event-capturing-DOM-JS/README.md)|
+|62| [Event Delegation in DOM](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/62_Event-Delegation-DOM-JS/README.md)|
+|63| [Local Storage in JS](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/63_Local-Storage-JS/README.md)|
+|64| [API – Talking to the Outside World](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/64_API-talking-to-the-outside-world-JS/README.md)|
+|65| [XMLHttpRequest in JS](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/65_XMLHttpRequest-JS/README.md)|
+|66| [Synchronous vs Asynchronous](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/66_Synchronous-Vs-Asynchronous-JS/README.md)|
+|67| [Callback Hell in JS](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/67_Callbakc-Hell-JS/README.md)|
+|68| [Promises in JS](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/68-Promises-JS/README.md)|
+|69| [Fix Callback Hell in JS](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/69_Fix-Callback-Hell-JS/README.md)|
+|70| [Introducing Fetch API in JS](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/70_Introducing-Fetch-API-JS/README.md)|
+|71| [Async/Await in JS](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/71_Async-Await-JS/README.md)|
+|72| [Try and Catch in JS](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/72_Try-and-Catch-JS/README.md)|
+|73| [Optional Chaining in JS](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/73_Optional-Chaining-JS/README.md)|
+|74| [ES6 Modules in JS/Import and Export](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/74_ES6-Modules-JS/README.md)|
+|75| [OOP and Factory Function in JS](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/75_Oop-and-factory-function-JS/README.md)|
+|76| [OOP and Constructor Functions in JS](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/76_Oop-and-Constructor-Functions-JS/README.md)|
+|77| [Classes in JS](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/77_Classes-in-JS/README.md)|
+|78| [How to Make Private Class Properties in JS](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/78_How-to-make-private-class-properties-JS/README.md)|
+|79| [Static Property and Methods in JS](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/79_Static-property-and-methods-in-JS/README.md)|
+|80| [Getters and Setters in JS](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/80_Getters-and-Setters-in-JS/README.md)|
+|81| [Prototypal Inheritance Using Extends and Super Keyword in JS](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/81_Prototypal-inheritance-using-Extends-and-Super-keyword-JS/README.md)|
+|82| [This Keyword in JS](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/82_This-Keyword-in-JS/README.md)|
+|83| [Dates in JS](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/83_Dates-in-JS/README.md)|
 
 | S No.    | Other Topics                         |
 |----------|--------------------------------------|
-|1|[Debugging and Throttling](./84_Othr-Topics-JS/DebuggingAndThrottlingInJS.md)|
-|2|[Higher Order Functions](./84_Othr-Topics-JS/HOF.md)|
-|2|[Map, Filter, and Reduce](./38_MAP-in-JS/README.md)|
-|2|[IIFE](./84_Othr-Topics-JS/IIF.md)|
-|3|[Closures](./84_Othr-Topics-JS/closures.md)|
-|2|[Regular Expressions](./84_Othr-Topics-JS/ReegEX.md)|
+|1|[Debugging and Throttling](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/84_Othr-Topics-JS/DebuggingAndThrottlingInJS.md)|
+|2|[Higher Order Functions](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/84_Othr-Topics-JS/HOF.md)|
+|2|[Map, Filter, and Reduce](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/38_MAP-in-JS/README.md)|
+|2|[IIFE](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/84_Othr-Topics-JS/IIF.md)|
+|3|[Closures](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/84_Othr-Topics-JS/closures.md)|
+|2|[Regular Expressions](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/84_Othr-Topics-JS/ReegEX.md)|
 ## Conclusion
 JavaScript has come a long way from its inception as a browser scripting language to becoming one of the most versatile and widely used programming languages in the world. Its adaptability, continuous evolution, and massive ecosystem make it an indispensable tool for modern development. Whether you're building web pages, mobile apps, or server-side applications, JavaScript has you covered.
 
