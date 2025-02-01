@@ -121,7 +121,7 @@ const max = arr.reduce(function (acc, curr) {
 console.log(max)
 
 //===============================================================
-// real life example
+//* real life example
 
 const users = [
   { firstName: "Ed", lastName: "Sheeran", age: 35 },
