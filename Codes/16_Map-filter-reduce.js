@@ -21,3 +21,18 @@ function triple(x) {
 function binary(x) {
     return x.toString(2);
 }
+
+console.log(arr.map(double));
+console.log(arr.map(triple));
+console.log(arr.map(binary));
+
+//? can also be written as
+// directly adding function inside map
+const doubleMap = arr.map(function (x) {
+    return x * 2;
+})
+// console.log(doubleMap);
+
+// or with arrow function
+const doubleArrow = arr.map((x) => x * 2)
+// console.log(doubleArrow);
