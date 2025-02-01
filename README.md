@@ -1,333 +1,216 @@
-<!-- # Execution Context.
-
-#### Everything in JS happens inside the execution context.
-
-Assume the execution context to be a big box where everything takes place. It has 2 components in it:
-
-Memory :The place where all the variables and functions are stored as (key: value) pairs. Memory component is also known as the variable environment.
-
-Code : The place where code is executed one line at a time. Code component is also known as theThread of Execution
-
-### JS is a synchronous single-threaded language. -->
-
-# Season 01:-
-#  Execution Context.
-
-#### Everything in JS happens inside the execution context.
-
-Assume the execution context to be a big box where everything takes place. It has 2 components in it:
-
-<li> <strong>Memory : </strong>The place where all the variables and functions are stored as (key: value) pairs. Memory component is also known as the <em>variable environment</em>.
-<li> <strong>Code : </strong>The place where code is executed one line at a time. Code component is also known as the<em>Thread of Execution</em>
-
-### JS is a synchronous single-threaded language.
-
-#  Execution & Call Stack
-
-When a JS program is ran, a global execution context is created.
-- The execution context is created in two phases.
-- Memory creation phase - JS will allocate memory to variables and functions.
-- Code execution phase.
-
-#  Hoisting
-
-- <strong>Hoisting </strong> is a concept which enables us to extract values of variables and functions even before initialising/assigning value without getting error and this is happening due to the 1st phase (memory creation phase) of the Execution Context.
-
-# Functions and Variable Environments
-
-## Code Flow in terms of Execution Context
-- The Global Execution Context (GEC) is created (the big box with Memory and Code subparts). Also GEC
-is pushed into Call Stack.
-
-# Shortest js program ,Window and this keyword
-
-- The shortest JS program is empty file. Because even then, JS engine does a lot of things. As always,
-even in this case, it creates the GEC(Global Execution Context) which has memory space and the execution context.
-- JS engine creates something known as 'window'. It is an object, which is created in the global space. It
-contains lots of functions and variables. These functions and variables can be accessed from anywhere.
-in the program. JS engine also creates a this keyword, which points to the window object at the global level. So, in summary, along with GEC, a global object (window) and a this variable are created.
-- In different engines, the name of global object changes. Window in browsers, but in nodeJS it is called
-something else. At global level, this === window.
-- If we create any variable in the global scope, then the variables get attached to the global object.
-
-# Undefined vs Not Defined
-
-- In first phase (memory allocation) JS assigns each variable a placeholder called undefined.
-undefined is when memory is allocated for the variable, but no value is assigned yet.
-- If an object/variable is not even declared/found in memory allocation phase, and tried to access it then
-it is Not defined
-- Not Defined !== Undefined
-### When variable is declared but not assigned value, its current value is undefined. But when the variable itself is not declared but called in code, then it is not defined.
-
-#  Scope and Lexical Environment
-- Scope in Javascript is directly related to Lexical Environment.
-- So, Lexical Environment = local memory + lexical env of its parent. Hence, Lexical Environement isthe local memory along with the lexical environment of its parent.
-- Lexical: In hierarchy, In order
-- Whenever an Execution Context is created, a Lexical environment(LE) is also created and is referenced in the local Execution Context(in memory space).
-- The process of going one by one to parent and checking for values is called scope chain or Lexcial environment chain.
-
-#  let, const, temporal dead zone, types of errors
-- let and const declarations are hoisted. But its different from var.
-- Temporal Dead Zone : Time since when the let variable was hoisted until it is initialized some value.
-- Reference Error are thrown when variables are in temporal dead zone.
-- Syntax Error doesn't even let us run single line of code
-- Let is a stricter version of var. Now, const is even more stricter than let.
-- Types of Error: Syntax, Reference, and Type.
-    - Uncaught ReferenceError: x is not defined at ...
-        This Error signifies that x has never been in the scope of the program. This literally means that x was never defined/declared and is being tried to be accesed.
-    - Uncaught ReferenceError: cannot access 'a' before initialization
-        This Error signifies that 'a' cannot be accessed because it is declared as 'let' and since it is not assigned a value, it is its Temporal Dead Zone. Thus, this error occurs.
-    - Uncaught SyntaxError: Identifier 'a' has already been declared
-        This Error signifies that we are redeclaring a variable that is 'let' declared. No execution will take place.
-    - Uncaught SyntaxError: Missing initializer in const declaration
-        This Error signifies that we haven't initialized or assigned value to a const declaration.
-    - Uncaught TypeError: Assignment to constant variable
-        This Error signifies that we are reassigning to a const variable.
-  
-#  Block Scope and Shadowing
-### What is a Block?
-- Block aka compound statement is used to group JS statements together into 1 group. We group them within {...}
-### What is Shadowing?
-- So, If one has same named variable outside the block, the variable inside the block shadows the outside variable. This happens only for var.
-### What is Illegal Shadowing?
-- We cannot shadow let with var. But it is valid to shadow a let using a let. However, we can shadow var with let.
-- All scope rules that work in function are same in arrow functions too.
-
-# Closures in JS
-- Function bundled along with it's lexical scope is closure.
-- JavaScript has a lexcial scope environment. If a function needs to access a variable, it first goes to its local memory. When it does not find it there, it goes to the memory of its lexical parent.
-- A closure is a function that has access to its outer function scope even after the function has returned. Meaning, A closure can remember and access variables and arguments reference of its outer function even after the function has returned.
-- Advantages of Closure:
-    - Module Design Pattern
-    - Currying
-    - Memoize
-    - Data hiding and encapsulation
-    - setTimeouts etc.
-- Disadvantages of Closure:
-    - Over consumption of memory
-    - Memory Leak
-    - Freeze browser
-
-#  setTimeout + Closures Interview Question
-- Time, tide and Javascript wait for none.
-
-# JS interview questions
-- Q1: What is Closure in Javascript?
-    - Ans: A function along with reference to its outer environment together forms a closure. Or in other words, A Closure is a combination of a function and its lexical scope bundled together.
-- Q2: Will the below code still forms a closure?
-    -  Yes, because inner function forms a closure with its outer environment so sequence doesn't matter.
-- Q3: Changing var to let, will it make any difference? 
-- Q4: Will inner function have the access to outer function argument?
-- Q5: In below code, will inner form closure with outest?
-- Q6: Output of below code and explaination?
-- Q7: Advantage of Closure?
-- Q8: Discuss more on Data hiding and encapsulation?
-- Q9: Disadvantage of closure?
-    - Overconsumption of memory when using closure as everytime as those closed over variables are not garbage collected till program expires. So when creating many closures, more memory is accumulated and this can create memory leaks if not handled. Garbage collector : Program in JS engine or browser that frees up unused memory. In highlevel languageslike C++ or JAVA, garbage collection is left to the programmer, but in JS engine its done implicitly.
- 
-# First class and Anonymous functions
-### Functions are heart ♥ of Javascript.
-- Q: What is Function statement?
-- Q: What is Function Expression?
-- Q: Difference between function statement and expression
-    - The major difference between these two lies in Hoisting.
-- Q: What is Function Declaration?
-    - Other name for function statement.
-- Q: What is Anonymous Function?
-    - A function without a name.
-- Q: What is Named Function Expression?
-    - Same as Function Expression but function has a name instead of being anonymous
-- Q: Parameters vs Arguments?
-- Q: What is First Class Function aka First Class Citizens?
-    - We can pass functions inside a function as arguments and /or return a function(HOF). These ability are altogether known as First class function. It is programming concept available in some other languages too.
-      
-# Callbacks and Event Listeners
-- Callback Functions
-    - Functions are first class citizens ie. take a function A and pass it to another function B. Here, A is a callback function. So basically I am giving access to function B to call function A. This callback function gives us the access to whole Asynchronous world in Synchronous world.
-    - JS is a synchronous and single threaded language. But due to callbacks, we can do async things in JS.
-- Event Listener
-- Garbage Collection and removeEventListeners
-    - Event listeners are heavy as they form closures. So even when call stack is empty, EventListener won't free up memory allocated to count as it doesn't know when it may need count again. So we remove event listeners when we don't need them (garbage collected) onClick, onHover, onScroll all in a page can slow it down heavily.
- 
-
-
-# Asynchronous JS and Event Loops
-### Note: Call stack will execeute any execeution context which enters it. Time, tide and JS waits for none.
-TLDR; Call stack has no timer.
-- Browser has JS Engine which has Call Stack which has Global execution context, local execution context etc.
-- But browser has many other superpowers - Local storage space, Timer, place to enter URL, Bluetooth access, Geolocation access and so on.
-- Now JS needs some way to connect the callstack with all these superpowers. This is done using Web APIs
-- WebAPIs
-    - None of the below are part of Javascript! These are extra superpowers that browser has. Browser gives access to JS callstack to use these powers.
-- setTimeout(), DOM APIs, fetch(), localstorage, console (yes, even console.log is not JS!!), location and so many more.
-      - setTimeout() : Timer function
-      - DOM APIs : eg.Document.xxxx ; Used to access HTML DOM tree. (Document Object Manipulation)
-      - fetch() : Used to make connection with external servers eg. Netflix servers etc.
-- We get all these inside call stack through global object ie. window
-    - Use window keyword like : window.setTimeout(), window.localstorage, window.console.log() to log something inside console.
-    - As window is global obj, and all the above functions are present in global object, we don't explicity write window but it is implied.
-- Q: Need of callback queue?
-    - Ans: Suppose user clicks button x6 times. So 6 cb() are put inside callback queue. Event loop sees if call stack is empty/has space and whether callback queue is not empty(6 elements here). Elements of callback queue popped off, put in callstack, executed and then popped off from call stack.
-- What enters the Microtask Queue ?
-    - All the callback functions that come through promises go in microtask Queue.
-    - Mutation Observer : Keeps on checking whether there is mutation in DOM tree or not, and if there, then it execeutes some callback function.
-    - Callback functions that come through promises and mutation observer go inside Microtask Queue.
-    - All the rest goes inside Callback Queue aka. Task Queue.
-    - If the task in microtask Queue keeps creating new tasks in the queue, element in callback queue never gets chance to be run. This is called starvation.
-## Some Important Questions
-- 1 When does the event loop actually start ?
-     - Event loop, as the name suggests, is a single-thread, loop that is almost infinite. It's always running and doing its job.
-- 2 Are only asynchronous web api callbacks are registered in web api environment?
-      - YES, the synchronous callback functions like what we pass inside map, filter and reduce aren't registered in the Web API environment. It's just those async callback functions which go through all this.
-- 3 Does the web API environment stores only the callback function and pushes the same callback to queue/microtask queue?
-    - Yes, the callback functions are stored, and a reference is scheduled in the queues. Moreover, in the case of event listeners(for example click handlers), the original callbacks stay in the web API environment forever, that's why it's adviced to explicitly remove the listeners when not in use so that the garbage collector does its job.
-- 4 How does it matter if we delay for setTimeout would be 0ms. Then callback will move to queue without any wait ?
-     - No, there are trust issues with setTimeout() 😅. The callback function needs to wait until the Call Stack is empty. So the 0 ms callback might have to wait for 100ms also if the stack is busy.
-       
-# : JS Engine Exposed Google's V8 architecture
-
-#### JS runs literally everywhere from smart watch to robots to browsers because of Javascript Runtime Environment (JRE)
-
-- JRE consists of a JS Engine (❤️ of JRE), set of APIs to connect with outside environment, event loop, Callback queue, Microtask queue etc.
-- JRE is a container that can run JS code.
-
-- ECMAScript is a governing body of JS. It has set of rules followed by all JS engines like Chakra(Edge), Spidermonkey(Firefox), v8(Chrome)
-- JS Engine is **not a machine**. Its software written in low level languages (eg. C++) that takes in hi-level code in JS and spits out low level machine
-  code
-
-In all languages, code is compiled either with **interpreter** or with **compiler**. JS used to have only interpreter in old times, but now has **both**
-to compile JS code.
-
-Interpreter : Takes code and executes line by line. Has no idea what will happen in next line. Very fast.
-Compiler : Code is compiled and an optimized version of same code is formed, and then executed. More efficient
-
-- Code inside JSE passes through 3 steps : **Parsing, Compilation and Execution**
-
-1. **Parsing** - Code is broken down into tokens. In "let a = 7" -> let, a, =, 7 are all tokens. Also we have a **syntax parser** that takes code and converts it
-   into an **AST (Abstract Syntax Tree)** which is a JSON with all key values like type, start, end, body etc (looks like package.json but for a line of code in JS. Kinda
-   unimportant)(Check out astexplorer.net -> converts line of code into AST)
-
-2. **Compilation** - JS has something called **Just-in-time(JIT) Compilation - uses both interpreter & compiler**. Also compilation and execution both go hand in hand.
-   The AST from previous step goes to interpreter which converts hi-level code to byte code and moves to execution. While interpreting, compiler also works hand in hand
-   to compile and form optimized code during runtime.
-
-3. **Execution** - Needs 2 components ie. Memory heap(place where all memory is stored) and Call Stack same call stack from prev There is also a _garbage collector._
-   It uses an algo called **Mark and Sweep**.
-
-Companies use different JS engines and each try to make theirs the best.
-
-- v8 of Google has Interpreter called _Ignition_, a compiler called _Turbo Fan_ and garbage collector called _Orinoco_
-
-#  Trust issues with settimeout()
-
-### The First rule of JavaScript: Do not block the main thread (as JS is a single threaded(only 1 callstack language).
-- In code example, we are blocking the main thread. Observe Question and Output.
-- setTimeout guarantees that it will take at least the given timer to execute the code.
-- JS is a synchronous single threaded language. With just 1 thread it runs all pieces of code. It becomes
-kind of an interpreter language, and runs code very fast inside browser (no need to wait for code to be
-compiled) (JIT - Just in time compilation). And there are still ways to do async operations as well.
-
-#  High order function ft. Functional Programming
-#### Q: What is Higher Order Function?
-- Ans: A Higher-order functions are regular functions that take other functions as arguments or return functions as their results.
-- More explanations in the code file with examples and demonstration.
-
-# map, filter and reduce
-### map, filter & reducer are Higher Order Functions.
-- Map function
-    - It is basically used to transform a array. The map() method creates a new array with the results of calling a function for every array element.
-    - So basically map function maps each and every value and transforming it based on given condition.
-- Filter function
-    - Filter function is basically used to filter the value inside an array. The arr.filter() method is used to create a new array from a given array consisting of only those elements from the given array which satisfy a condition set by the argument method.
-    - Filter function creates an array and store only those values which evaluates to true.
-- Reduce function
-    - It is a function which take all the values of array and gives a single output of it. It reduces the array to give a single output.
-      
-# Season 02:-
-# : Callback Hell
-## There are 2 Parts of Callback:
-### 1. Good Part of callback
-- Callback are super important while writing asynchronous code in JS.
-### 2. Bad Part of Callback
-- Using callback we can face issue:
-- 1 Callback hell
-    - When a function is passed as an argument to another function, it becomes a callback function. This process continues and there are many callbacks inside another's Callback function.
-    - This grows the code horizontally instead of vertically. That mechanism is known as callback hell. 
-
-- 2 Inversion of control
-    - The callback function is passed to another callback, this way we lose the control of our code. We don't know what is happening behind the scene and the program becomes very difficult to maintain. That process is called inversion of control.
-
-# Promises.
-### Promises are used to handle async operations in JavaScript.
-### We will discuss with code example that how things used to work before Promises and then how it works after Promises
-Interview Guide
-- What is Promise?
-    - Promise object is a placeholder for certain period of time until we receive value from asynchronous operation.
-    - A container for a future value.
-    - A Promise is an object representing the eventual completion or failure of an asynchronous operation.
-- We are now done solving one issue of callback i.e. Inversion of Control
-
-# Creating promise, Chaining and Error Handling
-
-> Promises are used to handle async operations in JavaScript.
-- Now, Let's understand the concept of Promise Chaining
-    - for this we will assume after createOrder we have to invoke proceedToPayment
-    - In promise chaining, whatever is returned from first .then become data for next .then and so on...
-    - At any point of promise chaining, if promise is rejected, the execution will fallback to .catch and others promise won't run.
-- Q: What if we want to continue execution even if any of my promise is failing, how to achieve this?
-    - By placing the .catch block at some level after which we are not concerned with failure.
-    - There could be multiple .catch too.
-
-# - async await
-- Topics Covered
-    - What is async?
-    - What is await?
-    - How async await works behind the scenes?
-    - Example of using async/await
-    - Error Handling
-    - Interviews
-    - Async await vs Promise.then/.catch
-- Q: What is async?
-  - A: Async is a keyword that is used before a function to create a async function.
-- Q: Question is Is program actually waiting or what is happening behind the scene?
-  - A: As we know, Time, Tide and JS wait for none. And it's true. Over here it appears that JS engine is waiting but JS engine is not waiting over here. It has not occupied the call stack if that would have been the case our page may have got frozen. So JS engine is not waiting. So if it is not waiting then what it is doing behind the scene? Let's understand with attached 
-- Error Handling
-  - While we were using normal Promise we were using .catch to handle error, now in async-await we would be using try-catch block to handle error.
-- Async await vs Promise.then/.catch
-  - What one should use? async-await is just a syntactic sugar around promise. Behind the scene async-await is just promise. So both are same, it's just async-await is new way of writing code. async-await solves few of the short-coming of Promise like Promise Chaining. async-await also increases the readability. So sort of it is always advisable to use async-await.
-- Fetch Call and Error handling
-
-# : Promise APIs + Interview Questions
-- Questions here soon 🔜
-
-# this keyword in Javascript
-
-- JavaScript's "this" keyword can be confusing for many and behaves differently in various scenarios.
-
-- In JavaScript, this keyword refers to the current context or scope within which code is executing. Its value is determined by how a function is called, and it can dynamically change depending on the invocation context.
-
--  In the global space, the value of "this" is the global object, which can vary depending on the JavaScript runtime environment (e.g., window in browsers, Global in Node.js).
-
-- Inside a function, the value of "this" can be undefined in strict mode or the global object in non-strict mode.
-
--  JavaScript uses a mechanism called "this substitution," where "this" is replaced with the global object when it's undefined or null in non-strict mode.
-
-- Inside an object's method, "this" refers to the object itself where the method is called.
-
-- "call," "apply," and "bind" are important functions used to manipulate the value of "this" when calling methods and sharing them between objects.
-
-- It's essential to understand "call," "apply," and "bind" to effectively control the value of "this" in JavaScript methods.
-
-- In global space, the 'this' keyword refers to the global object (e.g., 'window' in the browser).
-
-- In strict mode, 'this' inside a function is undefined; in non-strict mode, it refers to the global object.
-
-- Understanding "this" substitution: When 'this' is undefined or null inside a function, it becomes the global object.
-
-- Inside an object's method, 'this' refers to the object itself.
-
-- The 'call' method can be used to invoke a function with a specific 'this' context.
-
-- Arrow functions do not have their own 'this' binding and take the value of the enclosing lexical context.
-
-- In the context of DOM elements, 'this' refers to the specific HTML element being
+# JavaScript: An Introduction
+
+## Table of Contents
+
+1. [What is JavaScript?](#what-is-javascript)
+2. [History of JavaScript](#history-of-javascript)
+3. [Features of JavaScript](#features-of-javascript)
+4. [Evolution of JavaScript](#evolution-of-javascript)
+5. [JavaScript Use Cases](#javascript-use-cases)
+6. [Key Characteristics](#key-characteristics)
+7. [How JavaScript Works](#how-javascript-works)
+8. [Topics](#topics)
+
+
+
+## What is JavaScript?
+JavaScript is a versatile, high-level, and interpreted programming language primarily used to create interactive and dynamic content on web pages. It is one of the core technologies of the World Wide Web, alongside HTML and CSS. JavaScript enables client-side scripting, which allows developers to manipulate web page elements dynamically, handle events, and communicate with servers asynchronously.
+
+
+
+## History of JavaScript
+
+### **Development**
+- **Created By:** Brendan Eich
+- **Organization:** Netscape Communications Corporation
+- **Year:** 1995
+
+JavaScript was originally developed in just 10 days by Brendan Eich while working at Netscape. Initially, it was named **Mocha**, later renamed to **LiveScript**, and finally to **JavaScript** to align with the marketing buzz around Java.
+
+### **Timeline**
+- **1995:** JavaScript introduced in Netscape Navigator 2.0.
+- **1996:** Microsoft introduced **JScript**, a JavaScript implementation for Internet Explorer.
+- **1997:** The first standardization of JavaScript was published as **ECMAScript** by ECMA International (ECMAScript 1 or ES1).
+- **2009:** Node.js was introduced, enabling JavaScript to run outside the browser.
+- **2015:** ECMAScript 2015 (ES6) introduced significant improvements like `let`, `const`, arrow functions, promises, and modules.
+- **2023:** JavaScript continues to evolve with annual ECMAScript updates, bringing new features and improvements.
+
+
+## Features of JavaScript
+
+1. **Lightweight and Interpreted:** JavaScript is executed directly in the browser without needing a compilation step.
+2. **Dynamic Typing:** Variables in JavaScript are not bound to any specific type and can hold different data types at different times.
+3. **Prototype-Based Object Orientation:** JavaScript uses prototypes instead of classical inheritance.
+4. **Event-Driven Programming:** JavaScript responds to user actions, such as clicks, keypresses, and form submissions.
+5. **Cross-Browser Compatibility:** Modern JavaScript works across all major browsers.
+6. **Functional and Object-Oriented:** JavaScript supports multiple programming paradigms, including functional and object-oriented programming.
+7. **Rich API Support:** Provides built-in APIs for manipulating the DOM, handling HTTP requests, and more.
+
+
+
+## Evolution of JavaScript
+JavaScript has undergone significant improvements over the years. Below are some notable versions and features:
+
+### **ECMAScript Versions**
+
+| Version   | Release Year | Key Features                                               |
+|-----------|--------------|-----------------------------------------------------------|
+| ES1       | 1997         | First edition of the ECMAScript standard.                 |
+| ES3       | 1999         | Added regular expressions, try-catch, and more.           |
+| ES5       | 2009         | Introduced strict mode, JSON support, and array methods.  |
+| ES6 (ES2015)| 2015      | Major update: let/const, classes, modules, promises.       |
+| ES7       | 2016         | Introduced `Array.prototype.includes` and exponential operator. |
+| ES8 (ES2017)| 2017      | Async/await, object entries, and shared memory.            |
+| ES9 (ES2018)| 2018      | Rest/spread properties, asynchronous iteration.            |
+| ES10 (ES2019)| 2019     | Flat/flatMap for arrays, optional catch binding.           |
+| ES11 (ES2020)| 2020     | BigInt, nullish coalescing, and dynamic imports.           |
+| ES12 (ES2021)| 2021     | Logical assignment operators, `Promise.any`.               |
+| ES13 (ES2022)| 2022     | Top-level await, class static initialization blocks.       |
+
+
+## JavaScript Use Cases
+
+1. **Web Development:** JavaScript is widely used for creating dynamic web content, such as form validations, animations, and interactive elements.
+2. **Server-Side Development:** With Node.js, JavaScript is used for backend development.
+3. **Mobile App Development:** Frameworks like React Native allow JavaScript to be used for cross-platform mobile apps.
+4. **Game Development:** Libraries like Phaser.js enable game development using JavaScript.
+5. **Desktop Applications:** Frameworks like Electron.js are used to build desktop applications.
+6. **Data Visualization:** Libraries like D3.js help in creating stunning data visualizations.
+
+
+## Key Characteristics
+
+### Advantages
+- Supported by all modern browsers.
+- Asynchronous capabilities using callbacks, promises, and async/await.
+- Extensive ecosystem of libraries and frameworks.
+- Easy to learn for beginners.
+
+### Limitations
+- Lack of strict typing can lead to runtime errors.
+- Security concerns with client-side scripts.
+- Dependency on browser execution environment for certain features.
+
+
+## How JavaScript Works
+
+### JavaScript Engine
+A JavaScript engine is a program or interpreter that executes JavaScript code. Examples include:
+- **V8 Engine:** Used by Google Chrome and Node.js.
+- **SpiderMonkey:** Used by Mozilla Firefox.
+- **Chakra:** Used by Microsoft Edge (legacy).
+
+### Execution Model
+1. **Single-Threaded:** JavaScript runs on a single thread, using an event loop to handle asynchronous tasks.
+2. **Call Stack:** Keeps track of function calls.
+3. **Web APIs:** Provide browser-specific features like DOM manipulation, timers, and HTTP requests.
+4. **Event Loop:** Handles asynchronous tasks, ensuring the non-blocking behavior of JavaScript.
+
+
+## Topics
+Topics in detail:
+
+| S No.    | Topics                         |
+|----------|--------------------------------|
+|1| [Data types](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/01_Data-Types-In-JS/README.md) |
+|2| [Variables](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/02_Variables-In-JS/README.md) |
+|3| [Code Execution](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/03_Code-Execution-JS/README.md) |
+|4| [Dialogue boxes](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/04_Dialog-Boxes-In-JS/README.md) |
+|5| [String method and properties](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/05_String-Method-and-properties-in-JS/README.md) |
+|6| [Math](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/06_Math-JS/README.md) |
+|7| [Truthy and Falsy](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/07_Truthy-and-Falsy-JS/README.md) |
+|8| [Comparison Operator](https://github.com/sh1v-max/Learning_JavaScript-2.1/tree/main/08_Comparison-Operator-JS) |
+|9| [Logical Operators](https://github.com/sh1v-max/Learning_JavaScript-2.1/blob/main/09_Logical-Operators-JS/README.md)|
+|10| [Decision Making (IF)](./10_Decision-Making-IF-JS/README.md)|
+|11| [Optimize Decision Making](./11_Optimize-Decision-Making-JS/README.md)|
+|12| [Nested IF-ELSE](./12_Nested-IF-ELSE-JS/README.md)|
+|13| [Switch Case](./13_Switch-Case-JS/README.md)|
+|14| [Ternary Operator](./14_Ternary-Operator-JS/README.md)|
+|15| [Memory Location Visualisation](./15_Memory-Loacation-Visualisation-JS/README.md)|
+|16| [Objects](./16_Objects-JS/README.md)|
+|17| [Object Freeze/Seal](./17_Object-FreezeSeal-JS/README.md)|
+|18| [Array](./18_Array-JS/README.md)|
+|19| [Multidimensional Array](./19_Multidimensional-Array/README.md)|
+|20| [Duplicating Arrays and Objects](./20_Duplicationg-Arrays-and-Object/README.md)|
+|21| [Combined Assignment Operators](./21_Combined-Assignment-Operators-JS/README.md)|
+|22| [While Loop](./22_While-Loop-JS/README.md)|
+|23| [For Loop](./23-For-Loop-JS/README.md)|
+|24| [Do While Loop](./24_Do-While-Loop-JS/README.md)|
+|25| [Intro Functions](./25_Intro-Functions-JS/README.md)|
+|26| [Execution Context Function](./26-Execution-Context-Function-JS/README.md)|
+|27| [Hoisting](./27_Hoisting-JS/README.md)|
+|28| [Scope in JS](./28_Scope-in-JS/README.md)|
+|29| [Lexical and Block Scope](./29_Lexical-And-Block-Scope-JS/README.md)|
+|30| [High Order Function](./30_High-Order-Function-JS/README.md)|
+|31| [SetTimeout/SetInterval](./31_SetTimeOut-SetInterval-JS/README.md)|
+|32| [Event Loop and Callback Queue](./32_Event-Loop-and-Callback-Queue-JS/README.md)|
+|33| [Returning Function with Closure](./33_Returning-Function-With-Closure-JS/README.md)|
+|33.9| [Understanding Closure](./33.9_Understandig-Closure/README.md)|
+|34| [Function vs Methods](./34_Function-VS-Methods-JS/README.md)|
+|35| [Arrow Function](./35_Arrow-Function-JS/README.md)|
+|36| [For-in vs For-of Loop](./36_For-in-VS-For-of-Loop-JS/README.md)|
+|37| [ForEach Array Method](./37_ForEach-Array-method-JS/README.md)|
+|38| [Map, Filter, and Reduce in JS](./38_MAP-in-JS/README.md)|
+|39| [Some and Every in JS](./39_Some-and-Every-in-JS/README.md)|
+|40| [Argument Object in JS](./40_Argument-Object-In-JS/README.md)|
+|41| [Default Parameters](./41_Default-Parameters-JS/README.md)|
+|42| [Spread Operator](./42_Spread-Operator-JS/README.md)|
+|43| [Rest Parameters](./43_Rest-Parameters-JS/README.md)|
+|44| [Destructuring in JS](./44_Destructuring-in-JS/README.md)|
+|45| [Browser Object Model (BOM)](./45_Browser-Object-Model-BOM-JS/README.md)|
+|46| [Document Object Model (DOM)](./46_Document-Object-Model-JS/Readme.md)|
+|47| [Selecting Elements in DOM](./47_Selecting-element-DOM-JS/Readme.md)|
+|48| [InnerText, InnerHTML, TextContent in DOM](./48_InnerText-InnerHTML-TextContent-DOM-JS/README.md)|
+|49| [getAttribute, setAttribute in DOM](./49_getAttribute-setAttribute-DOM-JS/README.md)|
+|50| [How to Change Style in DOM](./50_How-to-change-Style-DOM-JS/README.md)|
+|51| [Accessing Parent and Child Elements in DOM](./51_Accessing-Parent-and-Child-elements-DOM-JS/README.md)|
+|52| [Element and Node in DOM](./52_Element-and-Node-DOM-JS/README.md)|
+|53| [append and appendChild in DOM](./53_append-and-appendChild-DOM-JS/README.md)|
+|54| [Creating Element in DOM](./54_Creating-element-DOM-JS/README.md)|
+|55| [Removing Element in DOM](./55_Removing-emelemt-DOM-JS/README.md)|
+|56| [Event Listeners in DOM](./56_Event-Listeners-DOM-JS/README.md)|
+|57| [Form Event and Event Object in DOM](./57_form-event-and-event-object-DOM-JS/README.md)|
+|58| [Keyboard Event in DOM](./58_Keyboard-event-DOM-JS/README.md)|
+|59| [Mouse Events in DOM](./59_Mouse-events-DOM-JS/README.md)|
+|60| [Event Bubbling and Capturing in DOM](./60_Event-bubbling-and-Event-capturing-DOM-JS/README.md)|
+|61| [Event Bubbling and Capturing in DOM (Duplicate)](./60_Event-bubbling-and-Event-capturing-DOM-JS/README.md)|
+|62| [Event Delegation in DOM](./62_Event-Delegation-DOM-JS/README.md)|
+|63| [Local Storage in JS](./63_Local-Storage-JS/README.md)|
+|64| [API – Talking to the Outside World](./64_API-talking-to-the-outside-world-JS/README.md)|
+|65| [XMLHttpRequest in JS](./65_XMLHttpRequest-JS/README.md)|
+|66| [Synchronous vs Asynchronous](./66_Synchronous-Vs-Asynchronous-JS/README.md)|
+|67| [Callback Hell in JS](./67_Callbakc-Hell-JS/README.md)|
+|68| [Promises in JS](./68-Promises-JS/README.md)|
+|69| [Fix Callback Hell in JS](./69_Fix-Callback-Hell-JS/README.md)|
+|70| [Introducing Fetch API in JS](./70_Introducing-Fetch-API-JS/README.md)|
+|71| [Async/Await in JS](./71_Async-Await-JS/README.md)|
+|72| [Try and Catch in JS](./72_Try-and-Catch-JS/README.md)|
+|73| [Optional Chaining in JS](./73_Optional-Chaining-JS/README.md)|
+|74| [ES6 Modules in JS](./74_ES6-Modules-JS/README.md)|
+|75| [OOP and Factory Function in JS](./75_Oop-and-factory-function-JS/README.md)|
+|76| [OOP and Constructor Functions in JS](./76_Oop-and-Constructor-Functions-JS/README.md)|
+|77| [Classes in JS](./77_Classes-in-JS/README.md)|
+|78| [How to Make Private Class Properties in JS](./78_How-to-make-private-class-properties-JS/README.md)|
+|79| [Static Property and Methods in JS](./79_Static-property-and-methods-in-JS/README.md)|
+|80| [Getters and Setters in JS](./80_Getters-and-Setters-in-JS/README.md)|
+|81| [Prototypal Inheritance Using Extends and Super Keyword in JS](./81_Prototypal-inheritance-using-Extends-and-Super-keyword-JS/README.md)|
+|82| [This Keyword in JS](./82_This-Keyword-in-JS/README.md)|
+|83| [Dates in JS](./83_Dates-in-JS/README.md)|
+
+| S No.    | Other Topics                         |
+|----------|--------------------------------------|
+|1|[Debugging and Throttling](./84_Othr-Topics-JS/DebuggingAndThrottlingInJS.md)|
+|2|[Higher Order Functions](./84_Othr-Topics-JS/HOF.md)|
+|2|[Map, Filter, and Reduce](./38_MAP-in-JS/README.md)|
+|2|[IIFE](./84_Othr-Topics-JS/IIF.md)|
+|3|[Closures](./84_Othr-Topics-JS/closures.md)|
+|2|[Regular Expressions](./84_Othr-Topics-JS/ReegEX.md)|
+## Conclusion
+JavaScript has come a long way from its inception as a browser scripting language to becoming one of the most versatile and widely used programming languages in the world. Its adaptability, continuous evolution, and massive ecosystem make it an indispensable tool for modern development. Whether you're building web pages, mobile apps, or server-side applications, JavaScript has you covered.
+
+## Reference 
+- [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [FreeCodeCamp](https://www.freecodecamp.org/news/full-javascript-course-for-beginners/)
+- [W3School](https://www.w3schools.com/js/default.asp)
+- [YouTube](https://www.youtube.com/playlist?list=PLfEr2kn3s-br9ZFmejfLhAgMbGgbpdof8)
+- [ChatGPT](https://chatgpt.com/)
