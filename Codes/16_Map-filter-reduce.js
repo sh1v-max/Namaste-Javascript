@@ -36,3 +36,22 @@ const doubleMap = arr.map(function (x) {
 // or with arrow function
 const doubleArrow = arr.map((x) => x * 2)
 // console.log(doubleArrow);
+
+//* filter
+// filter is a method that creates a new array with all elements that pass the test implemented by the provided fun
+// returns a new array with the elements that pass the test
+// if no elements pass the test, an empty array will be returned
+
+//const arr = [5, 1, 8, 7, 4];
+function isOdd(x) {
+  return x % 2;
+}
+function isEven(x) {
+  return x % 2 === 0;
+}
+function greaterThanFour(x) {
+  return x > 4;
+}
+console.log(arr.filter(isOdd))
+console.log(arr.filter(isEven))
+console.log(arr.filter(greaterThanFour))
