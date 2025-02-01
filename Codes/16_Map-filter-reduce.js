@@ -55,3 +55,25 @@ function greaterThanFour(x) {
 console.log(arr.filter(isOdd))
 console.log(arr.filter(isEven))
 console.log(arr.filter(greaterThanFour))
+
+//? can also be written as
+// directly adding function inside filter
+const isOddFilter = arr.filter(function (x) {
+    return x % 2;
+})
+// console.log(isOddFilter);
+
+// or with arrow function
+const isOddArrow = arr.filter((x) => x % 2)
+// console.log(isOddArrow);
+
+//* reduce
+// reduce is a method that executes a reducer function on each element of the array, resulting in a single output value
+// use reduce when you want to come up with single value as a result
+// returns a single value
+// reducer function takes 4 arguments
+// accumulator, currentValue, currentIndex, array
+// accumulator is the value returned by the last iteration
+// currentValue is the current element being processed
+// currentIndex is the index of the current element being processed
+// array is the array reduce was called upon
