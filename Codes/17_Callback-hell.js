@@ -87,21 +87,30 @@ async function execute() {
 // execute();
 
 
-// example with e commerce website, its cart
+// example with e commerce website
 const cart = ["pants", "shoes", "watch"]
-api.createOrder(cart, function () {
-
-  api.makePayment(function () {
-
-      api.showSummary(
+api.createOrder(cart, function () { // to create order
+  api.makePayment(function () { // to make payment
+      api.showSummary(  // to show summary
           function () {
-              api.updateWallet()
+              api.updateWallet() // to update wallet
           }
-
       )
   })
 })
+// create order calls makePayment, makePayment calls showSummary and showSummary calls updateWallet
+// and code start growing horizontally instead of vertically
+// this is called callback hell
+// makes code hard to read, debug, and maintain
+
+//? so what basically is callback hell?
+// once callback inside another callback inside another callback and so on
 
 //* inversion of control
-// inversion of control is a design principle in which the control of object 
-// creation is transferred to a container or framework
+// the callback function is passed to another callback, this way we lose the control
+// of code, we don't know what is happening behind the scene and 
+// the program becomes very difficult to maintain and debug
+// this is called inversion of control
+
+// in above example, we don't know what is happening inside createOrder, makePayment, showSummary
+// we just gave createOrder api the permission to call makePayment, makePayment to call showSummary
