@@ -1,22 +1,5 @@
-function greet( name, callback){
-    console.log('Hello ' + name);
-    callback();
-}
-
-function goodbye(){
-    console.log('Goodbye');
-}
-greet("Alice", goodbye);
-
-function fetchData(callback){
-  console.log('Fetching data');
-  setTimeout(() => {
-    callback('Data fetched');
-  }, 2000);
-}
-
-function processData(data){
-  console.log(data);
-}
-
-fetchData(processData);
+//* promise
+// a promise is an object that may produce a single value some time in the future
+// it represents the eventual completion (or failure) of an asynchronous operation
+// it allows you to handle asynchronous code in a cleaner way
+// avoid callback hell
