@@ -1,7 +1,11 @@
 //* promise
-// it represents the eventual completion (or failure) of an asynchronous operation
+//& it represents the eventual completion (or failure) of an asynchronous operation
 // is an object that may produce a single value some time in the future
 // it allows you to handle asynchronous code in a cleaner way
+
+//? other definitions
+// promise object is a placeholder for the certain period of time
+// until we get the result from the async operation
 
 //? uses
 // avoiding callback hell (make async code easier to read)
