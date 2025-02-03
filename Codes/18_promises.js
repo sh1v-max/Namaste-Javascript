@@ -7,3 +7,12 @@
 // avoiding callback hell (make async code easier to read)
 // handling async operations (api calls, setTimeout, file reading)
 // better error handling (can use .catch())
+
+const promiseOne = new Promise(function(resolve, reject){
+  //Do an async task
+  // DB calls, cryptography, network
+  setTimeout(function(){
+      console.log('Async task is compelete');
+      resolve()
+  }, 1000)
+})
