@@ -32,6 +32,7 @@ new Promise(function(resolve, reject){
   console.log("Async 2 resolved");
 })
 
+// example 3
 const promiseThree = new Promise(function(resolve, reject){
   setTimeout(function(){
       resolve({username: "Chai", email: "chai@example.com"})
@@ -42,6 +43,7 @@ promiseThree.then(function(user){
   console.log(user);
 })
 
+// example 4
 const promiseFour = new Promise(function(resolve, reject){
   setTimeout(function(){
       let error = true
