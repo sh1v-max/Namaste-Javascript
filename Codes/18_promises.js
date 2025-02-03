@@ -118,3 +118,29 @@ fetch('https://api.github.com/users/hiteshchoudhary')
     console.log(data);
 })
 .catch((error) => console.log(error))
+
+// other example
+// without promise
+const cart2 = ["Shoes", "Watches", "Flags"]
+
+const orderId2 = createOrder(cart2);
+proceedToPayment(orderId2);
+
+createOrder(cart2, function (orderId2) {
+    proceedToPayment(orderId2, function (paymentInf) {
+        showOrderSummary(paymentInf, function () {
+            updateWalletBalance()
+        })
+    })
+});
+
+// same with promise
+createOrder(cart2).then(function (orderId2) {
+  return proceedToPayment(orderId2);
+})
+  .then(function (paymentInf) {
+      return showOrderSummary(paymentInf)
+  })
+  .then(function () {
+      return updateWalletBalance();
+  })
