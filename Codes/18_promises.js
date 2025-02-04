@@ -41,7 +41,17 @@ p.finally(()=>{
   // finally() is called when a promise is resolved or rejected
   console.log('finally')
 })
+// then() and catch() are called asynchronously, and they return a promise
+// so we can chain multiple then() and catch() methods
 // a promise can only be resolved or rejected once
+//! promise goes to microtask queue
+//& these are the other javascript functions that return promises
+// fetch(), setTimeout(), setInterval(), readFile(), writeFile(), requestAnimationFrame()
+// fileReader.readAsText(), fileReader.readAsDataURL(), fileReader.readAsArrayBuffer()
+// navigator.geolocation.getCurrentPosition(), navigator.mediaDevices.getUserMedia()
+// new Promise(), new Response(), new Headers(), new Request(), new ReadableStream()
+// new WebSocket(), new BroadcastChannel(), new MessageChannel(), new MessagePort()
+
 
 //=========================================================
 //? other examples
