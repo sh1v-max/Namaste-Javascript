@@ -91,7 +91,6 @@ promiseThree.then(function(user){
   console.log(user);
 })
 
-
 // example 4
 const promiseFour = new Promise(function(resolve, reject){
   setTimeout(function(){
