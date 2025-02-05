@@ -59,4 +59,11 @@ function validateCart(cart) {
 //  Promise.all returns an array of all results when all promises succeed, waiting for all to finish.
 //  Promise.allSettled waits for all promises to settle (succeed or fail) before returning results, ensuring all promises are accounted for.
 //  Promise.race returns the result of the first settled promise, whether success or failure, racing to return the fastest result.
-//  
+//  Promise status can be checked for rejection along with the reason for rejection, providing clarity in handling errors.
+//  Promise.race returns the result of the first settled promise, whether it's a success or failure, regardless of the order in which promises are fulfilled.
+//  Explaining concepts in interviews requires not only understanding but also the ability to articulate ideas clearly, which is often a stumbling block for many candidates
+//  Promise.race resolves to the value/error of the first settled promise, regardless of success or failure, emphasizing the importance of understanding terminology in the Promise world.
+//  Familiarity with Promise terminology like "settled," "resolved," "rejected," "fulfilled," and "rejected" is crucial for effectively working with Promise APIs.
+//  Promise.any waits for the first settled promise, and if it's a success, returns the result, ignoring subsequent rejections until a success occurs.
+//  When all promises fail with Promise.any, it results in an "aggregate error," which consolidates all the errors encountered during execution.
+//  Handling aggregate errors in Promise.any involves accessing the errors in an array format, allowing for comprehensive error management and analysis.
