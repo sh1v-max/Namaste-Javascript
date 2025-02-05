@@ -36,7 +36,7 @@ function createOrder(cart) {
   });
   return pr;
 }
-function procedToPayment() {
+function proceedToPayment() {
   return new Promise(function (resolve, reject) {
       resolve("Payment Successful")
   })
