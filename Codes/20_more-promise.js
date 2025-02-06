@@ -8,6 +8,7 @@
 // waiting for all to finish.
 // If any promise in Promise.all fails, the entire operation fails, 
 // and an error is thrown immediately without waiting for other promises.
+//? promise.allSettled
 // Promise.allSettled waits for all promises to settle (whether fulfilled or rejected) 
 // before returning an array of results or errors, making it suitable for scenarios where partial 
 // failures are acceptable.
