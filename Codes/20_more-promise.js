@@ -8,12 +8,15 @@
 // waiting for all to finish.
 // If any promise in Promise.all fails, the entire operation fails, 
 // and an error is thrown immediately without waiting for other promises.
+//~ return an array of results when all promises are fulfilled
+
 //? promise.allSettled
 // Promise.allSettled waits for all promises to settle (whether fulfilled or rejected) 
 // before returning an array of results or errors, making it suitable for scenarios where partial 
 // failures are acceptable.
 // Promise.allSettled waits for all promises to settle (succeed or fail) 
 // before returning results, ensuring all promises are accounted for.
+//~ return an array of results or errors when all promises are settled
 
 //? promise.race
 // Promise.race returns the result of the first settled promise, whether it's success or failure, 
@@ -28,6 +31,7 @@
 // to articulate ideas clearly, which is often a stumbling block for many candidates
 // Promise.race resolves to the value/error of the first settled promise, regardless 
 // of success or failure, emphasizing the importance of understanding terminology in the Promise world.
+//~ return the result of the first settled promise
 
 //? promise.any
 // Promise.any is similar to Promise.race but waits for the first successful promise 
@@ -42,7 +46,7 @@
 // which consolidates all the errors encountered during execution.
 // Handling aggregate errors in Promise.any involves accessing the errors in an 
 // array format, allowing for comprehensive error management and analysis.
-
+//~ return the result of the first successful promise
 
 //Consuming Promise
 const cart = ["Shoes", "Watches", "Flags"]
