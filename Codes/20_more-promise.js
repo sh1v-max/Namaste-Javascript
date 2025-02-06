@@ -48,51 +48,24 @@
 // array format, allowing for comprehensive error management and analysis.
 //~ return the result of the first successful promise
 
-//Consuming Promise
-const cart = ["Shoes", "Watches", "Flags"]
+//? promise.all
+// example 1
+const p1 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("P1 Success");
+  }, 3000);
+});
+const p2 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("P2 Success");
+  }, 1000);
+});
+const p3 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("P3 Success");
+  }, 2000);
+});
 
-createOrder(cart)//return orderId
-    .then(function (orderId) {
-        console.log(orderId)
-        return orderId;
-    })
-    .then(function (orderId) {
-        return proceedToPayment(orderId);
-    })
-    .then(function (paymentInfo) {
-        console.log(paymentInfo);
-    })
-    .catch(function (err) {
-        console.log(err.message);
-    })//Handling error and displaying normally in console 
-
-
-    //Creating a promise
-//Producer side code
-function createOrder(cart) {
-  const pr = new Promise(function (resolve, reject) {
-      //validateCart
-      if (!validateCart(cart)) {
-          const err = new Error("Cart is not valid")
-          reject(err);
-      }
-      //CreateOrder
-      const orderId = "12345";
-      if (orderId) {
-          setTimeout(function () {
-              resolve(orderId);
-          }, 2000)
-      }
-  });
-  return pr;
-}
-function proceedToPayment() {
-  return new Promise(function (resolve, reject) {
-      resolve("Payment Successful")
-  })
-}
-function validateCart(cart) {
-  // return true;
-   return false;
-// It will throw an error.//Card is not valid
-}
+Promise.all([p1, p2, p3]).then((results) => {
+  console.log(results); // ['P1 Success', 'P2 Success', 'P3 Success'] -> took 3 secs
+});
