@@ -69,3 +69,154 @@ const p3 = new Promise((resolve, reject) => {
 Promise.all([p1, p2, p3]).then((results) => {
   console.log(results); // ['P1 Success', 'P2 Success', 'P3 Success'] -> took 3 secs
 });
+
+// example 2
+const p11 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("P1 Success");
+  }, 3000);
+});
+const p22 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    reject("P2 Fail");
+  }, 1000);
+});
+const p33 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("P3 Success");
+  }, 2000);
+});
+
+Promise.all([p1, p2, p3])
+  .then((results) => console.log(results))
+  .catch((err) => console.error(err)); // throws error after 1 sec i.e. 'P2 Fails'
+
+//? promise.allSettled
+// example 1
+const p111 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("P1 Success");
+  }, 3000);
+});
+const p222 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("P2 Success");
+  }, 1000);
+});
+const p333 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    reject("P3 Fail");
+  }, 2000);
+});
+
+Promise.allSettled([p1, p2, p3])
+  .then((results) => console.log(results))
+  .catch((err) => console.error(err));
+
+// Over here, it will wait for all promises to be either settled or rejected and then return,
+/*
+    [
+      {status: 'fulfilled', value: 'P1 Success'},
+      {status: 'fulfilled', value: 'P2 Success'},
+      {status: 'rejected', reason: 'P3 Fail'}
+    ]
+  */
+
+
+//? promise.race
+// example 1
+
+const p10 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("P1 Success");
+  }, 3000);
+});
+const p20 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("P2 Success");
+  }, 5000);
+});
+const p30 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    reject("P3 Fail");
+  }, 2000);
+});
+
+Promise.race([p1, p2, p3])
+  .then((results) => console.log(results))
+  .catch((err) => console.error(err));
+
+//After 2 secs O/P: "P3 Fail"
+
+//? promise.any
+// example 1
+
+const p01 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("P1 Success");
+  }, 3000);
+});
+const p02 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("P2 Success");
+  }, 5000);
+});
+const p03 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    reject("P3 Fail");
+  }, 2000);
+});
+
+Promise.any([p1, p2, p3])
+  .then((results) => console.log(results))
+  .catch((err) => console.error(err));
+
+//Example 2
+const p001 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    reject("P1 Fail");
+  }, 3000);
+});
+const p002 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("P2 Success");
+  }, 5000);
+});
+const p003 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    reject("P3 Fail");
+  }, 2000);
+});
+
+Promise.any([p1, p2, p3])
+  .then((results) => console.log(results))
+  .catch((err) => console.error(err));
+
+// After 5 secs: 'P2 Success'
+//Example 3
+const p1a = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    reject("P1 Fail");
+  }, 3000);
+});
+const p2a = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    reject("P2 Fail");
+  }, 5000);
+});
+const p3a = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    reject("P3 Fail");
+  }, 2000);
+});
+
+Promise.any([p1, p2, p3])
+  .then((results) => console.log(results))
+  .catch((err) => {
+    console.error(err);
+    console.error(err.errors); // ['P1 Fail', 'P2 Fail', 'P3 Fail']
+  });
+
+// Since all are rejected, so it will give "aggregate error" as output
+// AggregateError: All promises were rejected
+// To get AggregateError array you need to write "err.errors"
