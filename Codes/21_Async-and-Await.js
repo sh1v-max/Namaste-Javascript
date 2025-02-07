@@ -87,7 +87,6 @@ async function fetchData() {
   let result = await delay(); // Waits for delay() to resolve
   console.log(result);
   // console.log("Finally, promise resolved");
-  // console.log("would you talk to me now, Crescha?");
 }
 
 // fetchData(); 
@@ -168,7 +167,7 @@ async function handlePromise() {
   console.log("p2 resolved");
   console.log(val2);
 }
-handlePromise();
+// handlePromise();
 
 // output:
 // Hi             ---> immediately
@@ -199,3 +198,35 @@ handlePromise();
 // Moreover in above scenario what if p1 would be taking 10 secs and p2 5 secs -> 
 // even though p2 got resolved earlier but JS is synchronous single threaded language 
 // so it will first wait for p1 to be resolved and then will immediately execute all.
+
+//=============================================================
+//* real world example
+async function handlePromise2() {
+  // fetch() => Response Object which as body as Readable stream => Response.json() is also a promise which when resolved => value
+  const data = await fetch("https://api.github.com/users/sh1v-max") // fetch returns a promise
+  const res = await data.json(); //.json() is also a promise
+  console.log(res);
+}
+// handlePromise2();
+
+//* error handling in async/await
+// we don't have .catch method in async/await
+// we use try/catch block to handle errors
+async function handlePromise3() {
+  try {
+    const data = await fetch("https://gfsdfhgsfddgsh1v-ma");
+    const res = await data.json();
+    console.log(res);
+  } catch (err) {
+    console.log(err);
+  }
+}
+handlePromise3();
+
+// In above whenever any error will occur the execution will quickly move to catch block. 
+// and then you can handle error in catch block.
+// One could try above with bad url which will result in error.
+
+// Other way of handling error:
+// handlePromise3().catch((err) => console.log(err)); 
+// this will work as handlePromise will return error promise in case of failure.
