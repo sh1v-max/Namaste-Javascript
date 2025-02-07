@@ -230,3 +230,11 @@ handlePromise3();
 // Other way of handling error:
 // handlePromise3().catch((err) => console.log(err)); 
 // this will work as handlePromise will return error promise in case of failure.
+
+//=========================================================
+//* Async await vs Promise.then/.catch
+//? what one should use?
+// async-await is just a syntactic sugar around promise. Behind the scene async-await is just promise. 
+// So both are same, it's just async-await is new way of writing code. async-await solves few of the 
+// short-coming of Promise like Promise Chaining. async-await also increases the readability. 
+// So sort of it is always advisable to use async-await.

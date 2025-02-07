@@ -190,3 +190,4 @@ createOrder(cart2).then(function (orderId2) {
   .then(function () {
       return updateWalletBalance();
   })
+
