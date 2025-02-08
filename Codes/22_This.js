@@ -20,3 +20,11 @@ function x() {
 }
 x();
 // window.x(); // window
+
+//& this substitution
+// according to this substitution, if the value of this keyword is 
+// null/undefined, it will be replaced with global object (in non-strict mode)
+// this is the reason why this refers to global window object inside function in non-strict mode
+
+//~ if the value of this keyword is undefined or null, this keyword
+// will be replaced with globalObject only in non-strict mode
