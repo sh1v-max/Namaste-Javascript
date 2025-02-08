@@ -30,17 +30,48 @@ x();
 // will be replaced with globalObject only in non-strict mode
 
 //===============================================================
-//? inside object
-
-const obj = {
+//? inside object/object method
+// a function, if a part of object is called a method
+const obj0 = {
   a: 10,
   x: function () {
     console.log(this); // {a: 10, x: f()}
     console.log(this.a); // 10
   },
 };
-obj.x(); // value of `this` is referring to current object i.e. `obj`
+obj0.x(); // value of `this` is referring to current object i.e. `obj`
+// output: 
+// {a: 10, x: f()}
+// 10
 
+//===============================================================
+//? explicit binding
+// this can be explicitly set using call(), apply(), bind()
+//~ call() and apply() are used to call a function with a given `this` value
+const student = {
+  name: "wazir",
+  printName: function () {
+    console.log(this.name);
+  },
+};
+student.printName(); // wazir
+
+const student2 = {
+  name: "shiv",
+};
+// student2.printName(); // throw error
+
+// how to re-use printName method from `student` object
+student.printName.call(student2); // shiv
+// Above `call` method is taking the value of `this` keyword
+// So, Inside `printName` method value of `this` is now `student2` object
+
+// So, call, bind and apply is used to set the value of this keyword.
+
+//===============================================================
+//? arrow function
+// arrow function does not have its own this
+// they take the value from enclosing lexical context
 
 
 //! summary
