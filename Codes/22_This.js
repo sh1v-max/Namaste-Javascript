@@ -28,3 +28,23 @@ x();
 
 //~ if the value of this keyword is undefined or null, this keyword
 // will be replaced with globalObject only in non-strict mode
+
+//===============================================================
+//? inside object
+
+const obj = {
+  a: 10,
+  x: function () {
+    console.log(this); // {a: 10, x: f()}
+    console.log(this.a); // 10
+  },
+};
+obj.x(); // value of `this` is referring to current object i.e. `obj`
+
+
+
+//! summary
+//? in global space >> globalObject >> window (browser) / global (node)
+//? inside function >> globalObject (non-strict) / undefined (strict)
+  // x(); // window (non-strict) / undefined (strict)
+  // window.x(); // window 
